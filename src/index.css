@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    margin: 0;
+    background: #0B1020;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 30, 0.3), inset 0 1px 1px 0 rgba(255,255,255,0.08);
+  }
+  .glass-premium {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.04) 100%);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 60px -10px rgba(0, 212, 255, 0.25), 0 8px 24px -4px rgba(124, 58, 237, 0.2), inset 0 1px 1px 0 rgba(255,255,255,0.12);
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #00D4FF 0%, #A78BFA 50%, #FF4D9D 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gradient-primary {
+    background: linear-gradient(135deg, #00D4FF 0%, #7C3AED 50%, #FF4D9D 100%);
+  }
+  .gradient-primary-soft {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.25) 0%, rgba(124, 58, 237, 0.25) 50%, rgba(255, 77, 157, 0.25) 100%);
+  }
+  .mesh-bg {
+    background-color: #0B1020;
+    background-image:
+      radial-gradient(at 20% 20%, rgba(0, 212, 255, 0.35) 0px, transparent 50%),
+      radial-gradient(at 80% 10%, rgba(124, 58, 237, 0.3) 0px, transparent 50%),
+      radial-gradient(at 60% 80%, rgba(255, 77, 157, 0.2) 0px, transparent 50%),
+      radial-gradient(at 10% 90%, rgba(0, 212, 255, 0.15) 0px, transparent 50%);
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .animate-delay-100 { animation-delay: 0.1s; opacity: 0; }
+  .animate-delay-200 { animation-delay: 0.2s; opacity: 0; }
+  .animate-delay-300 { animation-delay: 0.3s; opacity: 0; }
+  .animate-delay-400 { animation-delay: 0.4s; opacity: 0; }
+  .animate-delay-500 { animation-delay: 0.5s; opacity: 0; }
+  .animate-delay-600 { animation-delay: 0.6s; opacity: 0; }
+  .animate-delay-700 { animation-delay: 0.7s; opacity: 0; }
+  .animate-delay-800 { animation-delay: 0.8s; opacity: 0; }
+  .perspective {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
